@@ -15,3 +15,8 @@ func NewMember() *MemberData {
 func (m *MemberData) GetAllData() []model.Member {
 	return m.data
 }
+
+func (m *MemberData) PostAddData(data model.Member) model.Member {
+	m.data = append(m.data, data)
+	return data
+}
